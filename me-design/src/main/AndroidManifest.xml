@@ -8,16 +8,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MeSDK">
         <activity
-            android:name=".MainActivity"
+            android:name=".ListActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MeSDK">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.MeSDK" />
     </application>
 
 </manifest>
