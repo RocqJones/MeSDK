@@ -1,4 +1,4 @@
-package com.rocqjones.mesdk
+package com.rocqjones.me_design
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,9 +10,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.rocqjones.mesdk.ui.theme.MeSDKTheme
+import com.rocqjones.me_design.ui.theme.MeSDKTheme
 
-class MainActivity : ComponentActivity() {
+class ListActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("First Launcher Screen")
+                    Greeting("Second screen")
                 }
             }
         }
