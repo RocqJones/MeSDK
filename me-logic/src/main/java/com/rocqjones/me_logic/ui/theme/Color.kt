@@ -1,4 +1,4 @@
-package com.rocqjones.mesdk.ui.theme
+package com.rocqjones.me_logic.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
