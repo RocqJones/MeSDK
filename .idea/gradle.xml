@@ -12,6 +12,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/me-design" />
+            <option value="$PROJECT_DIR$/me-logic" />
           </set>
         </option>
       </GradleProjectSettings>
