@@ -1,4 +1,4 @@
-package com.rocqjones.me_logic_library
+package com.rocqjones.me_logic
 
 import org.junit.Test
 
