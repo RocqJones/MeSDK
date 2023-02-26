@@ -1,4 +1,4 @@
-package com.rocqjones.mesdk.ui.theme
+package com.rocqjones.me_design.ui.theme
 
 import android.app.Activity
 import android.os.Build

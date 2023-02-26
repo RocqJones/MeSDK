@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.rocqjones.me_logic_library'
+    namespace 'com.rocqjones.me_logic'
     compileSdk 33
 
     defaultConfig {

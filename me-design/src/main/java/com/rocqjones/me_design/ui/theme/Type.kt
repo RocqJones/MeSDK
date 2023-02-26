@@ -1,4 +1,4 @@
-package com.rocqjones.mesdk.ui.theme
+package com.rocqjones.me_design.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
