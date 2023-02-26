@@ -1,4 +1,4 @@
-package com.rocqjones.me_design_library
+package com.rocqjones.me_design
 
 import org.junit.Test
 
