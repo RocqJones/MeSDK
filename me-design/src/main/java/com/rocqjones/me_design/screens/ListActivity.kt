@@ -1,4 +1,4 @@
-package com.rocqjones.me_design
+package com.rocqjones.me_design.screens
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -22,7 +22,7 @@ class ListActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Second screen")
+                    Greeting("Compose")
                 }
             }
         }
@@ -31,7 +31,7 @@ class ListActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(text = "List $name!")
 }
 
 @Preview(showBackground = true)

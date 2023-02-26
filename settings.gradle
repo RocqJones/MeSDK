@@ -16,3 +16,4 @@ rootProject.name = "Me SDK"
 include ':app'
 include ':me-design'
 include ':me-logic'
+
