@@ -12,6 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.rocqjones.me_design.ui.theme.MeSDKTheme
 
+/**
+ * This is the first launcher screen of the SDK.
+ * You'll access all feature modules from this screen.
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
