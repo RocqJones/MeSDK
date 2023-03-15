@@ -5,10 +5,7 @@ import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -67,23 +64,28 @@ fun FirstScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        val padding = 24.dp
         Text(
             "Welcome to the Me SDK!",
             style = MaterialTheme.typography.headlineMedium,
-            color =MaterialTheme.colorScheme.secondary
+            color =MaterialTheme.colorScheme.secondary,
         )
         Button(
-            modifier = Modifier.padding(vertical = 24.dp),
+            modifier = Modifier.padding(padding).fillMaxWidth(),
+            shape = MaterialTheme.shapes.medium,
             onClick = onMoveToListClicked // sets the sate to true
         ) {
-            Text("Endless List")
+            Text(
+                "Endless List",
+                style = MaterialTheme.typography.bodyLarge
+            )
         }
     }
 }
 
 @Preview(
     showBackground = true,
-    widthDp = 320,
+    widthDp = 400,
     uiMode = Configuration.UI_MODE_NIGHT_YES,
     name = "DefaultPreviewDark"
 )
