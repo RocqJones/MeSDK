@@ -85,7 +85,12 @@ fun FirstScreen(
 
 @Preview(
     showBackground = true,
-    widthDp = 400,
+    widthDp = 320,
+    name = "DefaultPreviewLight"
+)
+@Preview(
+    showBackground = true,
+    widthDp = 320,
     uiMode = Configuration.UI_MODE_NIGHT_YES,
     name = "DefaultPreviewDark"
 )
