@@ -3,6 +3,11 @@
 
     <application>
         <activity
+            android:name=".screens.bottomNavAdaptive.AdaptiveNavActivity"
+            android:exported="false"
+            android:label="@string/title_activity_adaptive_nav"
+            android:theme="@style/Theme.MeSDK" />
+        <activity
             android:name=".screens.ListActivity"
             android:exported="false"
             android:label="@string/title_activity_list"
