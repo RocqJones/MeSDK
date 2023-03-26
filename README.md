@@ -19,3 +19,6 @@ This **Continuous Integration** systems let you automatically build and test you
 [More reference for testing with CI can be found here](https://firebase.google.com/docs/test-lab/android/continuous)
 - Below case, Android CI runs automated checks for a PR.
 ![image](https://user-images.githubusercontent.com/32324500/227779223-a5e716a2-3597-40b9-8523-c4a255d3bd6b.png)
+- Successful check.
+![image](https://user-images.githubusercontent.com/32324500/227779507-961e8dbd-0c72-4307-9571-23b3487d2a92.png)
+
