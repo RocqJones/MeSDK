@@ -22,7 +22,7 @@ class AdaptiveNavActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Check Android CI & Branch protection rule")
+                    Greeting("Check Android CI & Branch protection")
                 }
             }
         }
