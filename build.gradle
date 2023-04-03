@@ -1,6 +1,7 @@
 buildscript {
     ext {
-        compose_version = '1.4.0'
+        compose_version = '1.4.0' // compose.runtime
+        compose_compiler = '1.4.4' // Release: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
