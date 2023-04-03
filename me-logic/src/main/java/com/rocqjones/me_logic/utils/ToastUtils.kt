@@ -8,7 +8,7 @@ import com.rocqjones.me_logic.R
 /**
  * This will be used instead of normal boring Toast
  */
-class CustomToastUtils(activity : Activity) {
+class ToastUtils(activity : Activity) {
 
     private var snackBar: Snackbar? = null
     private var activityContext: Activity? = null
