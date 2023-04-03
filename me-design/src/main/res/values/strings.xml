@@ -1,5 +1,7 @@
 <resources>
     <string name="show_less">Show less</string>
     <string name="show_more">Show more</string>
-    <string name="title_activity_list">ListActivity</string>
+    <string name="title_activity_list">List Activity</string>
+    <string name="title_activity_adaptive_nav">Adaptive Nav Activity</string>
+    <string name="title_base_activity">Base Activity</string>
 </resources>

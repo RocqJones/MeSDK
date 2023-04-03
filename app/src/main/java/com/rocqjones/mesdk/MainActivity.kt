@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.rocqjones.me_design.screens.ListActivity
+import com.rocqjones.me_design.screens.bottomNavAdaptive.AdaptiveNavActivity
 import com.rocqjones.me_design.ui.theme.MeSDKTheme
 
 /**
@@ -33,18 +34,29 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     FirstScreen(
-                        onMoveToListClicked = { navigateToList() }
+                        onMoveToListClicked = { navigateToList() },
+                        onMoveToNavClicked = { navigateToAdaptiveUI() }
                     )
                 }
             }
         }
     }
 
+    private fun navigateToAdaptiveUI() {
+        try {
+            val b = Intent(this, AdaptiveNavActivity::class.java)
+            b.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(b)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
     private fun navigateToList() {
         try {
-            val i = Intent(this, ListActivity::class.java)
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(i)
+            val a = Intent(this, ListActivity::class.java)
+            a.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(a)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -54,6 +66,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun FirstScreen(
     onMoveToListClicked: () -> Unit,
+    onMoveToNavClicked: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     /**
@@ -64,12 +77,13 @@ fun FirstScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        val padding = 24.dp
+        val padding = 8.dp
         Text(
             "Welcome to the Me SDK!",
             style = MaterialTheme.typography.headlineMedium,
             color =MaterialTheme.colorScheme.secondary,
         )
+        // list
         Button(
             modifier = Modifier.padding(padding).fillMaxWidth(),
             shape = MaterialTheme.shapes.medium,
@@ -77,6 +91,18 @@ fun FirstScreen(
         ) {
             Text(
                 "Endless List",
+                style = MaterialTheme.typography.bodyLarge
+            )
+        }
+
+        // Adaptive Navigation
+        Button(
+            modifier = Modifier.padding(padding).fillMaxWidth(),
+            shape = MaterialTheme.shapes.medium,
+            onClick = onMoveToNavClicked // sets the sate to true
+        ) {
+            Text(
+                "Adaptive Navigation",
                 style = MaterialTheme.typography.bodyLarge
             )
         }
@@ -97,6 +123,9 @@ fun FirstScreen(
 @Composable
 fun DefaultPreview() {
     MeSDKTheme {
-        FirstScreen(onMoveToListClicked = {}) // empty lambda expression means "Do nothing" on click
+        FirstScreen(
+            onMoveToListClicked = {},
+            onMoveToNavClicked = {}
+        ) // empty lambda expression means "Do nothing" on click
     }
 }
