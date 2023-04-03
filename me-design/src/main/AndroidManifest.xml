@@ -12,6 +12,11 @@
             android:exported="false"
             android:label="@string/title_activity_list"
             android:theme="@style/Theme.MeSDK" />
+        <activity
+            android:name=".base.BaseActivity"
+            android:exported="false"
+            android:label="@string/title_base_activity"
+            android:theme="@style/Theme.MeSDK" />
     </application>
 
 </manifest>
