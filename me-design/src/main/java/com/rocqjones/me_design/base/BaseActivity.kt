@@ -1,9 +1,9 @@
 package com.rocqjones.me_design.base
 
+import android.app.Activity
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.activity.ComponentActivity
-import com.rocqjones.me_logic.utils.CustomToastUtils
+import com.rocqjones.me_logic.utils.ToastUtils
 
 /**
  * This will be the base class of our Design library where we'll be defining all our common behaviour used across our Activities.
@@ -12,11 +12,22 @@ import com.rocqjones.me_logic.utils.CustomToastUtils
  */
 abstract class BaseActivity : ComponentActivity() {
 
-    lateinit var toastUtils : CustomToastUtils
+    private var activityContext: Activity? = null
+    var toastUtils: ToastUtils? = null
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        // init
-        toastUtils = CustomToastUtils(this)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        initialize()
     }
+
+    private fun initialize() {
+        try {
+            activityContext = activityContext()
+            toastUtils = ToastUtils(activityContext!!)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    protected abstract fun activityContext(): Activity
 }

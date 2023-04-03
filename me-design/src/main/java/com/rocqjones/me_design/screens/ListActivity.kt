@@ -59,7 +59,6 @@ fun GenerateLazyList(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ItemCard(name: String) {
     Card(

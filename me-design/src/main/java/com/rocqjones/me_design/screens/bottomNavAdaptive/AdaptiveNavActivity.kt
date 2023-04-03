@@ -1,5 +1,6 @@
 package com.rocqjones.me_design.screens.bottomNavAdaptive
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,6 +14,11 @@ import com.rocqjones.me_design.base.BaseActivity
 import com.rocqjones.me_design.ui.theme.MeSDKTheme
 
 class AdaptiveNavActivity : BaseActivity() {
+
+    override fun activityContext(): Activity {
+        return this
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -23,12 +29,17 @@ class AdaptiveNavActivity : BaseActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     Greeting("Check Android CI & Branch protection")
+                    try {
+                        // Test custom snackBar
+                        toastUtils?.showSnackBar("This screen successfully lunched")
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
                 }
             }
         }
 
-        // Test custom snackBar
-        toastUtils.showSnackBar("This screen successfully lunched")
+
     }
 }
 
