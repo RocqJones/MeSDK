@@ -55,25 +55,21 @@ dependencies {
     // Me Android SDK - logic
     implementation project(":me-logic")
 
-    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation "androidx.core:core-ktx:$core_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
 
-    // other dependencies
-    implementation 'androidx.core:core-ktx:1.12.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.10.0'
-
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
-    implementation 'androidx.activity:activity-compose:1.8.0'
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.compose.material3:material3:1.1.2'
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$test_junit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$junit_version"
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$test_manifest"
 
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_runtime"
+    implementation "androidx.activity:activity-compose:$activity_compose"
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
 
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.compose.material3:material3:$material3_version"
 }
