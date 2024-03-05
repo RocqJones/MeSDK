@@ -2,7 +2,7 @@ buildscript {
     ext.compose_version = '1.5.4' // compose.runtime
     ext.compose_compiler = '1.4.4' // Release: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
 }
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 plugins {
     id 'com.android.application' version '8.1.4' apply false
     id 'com.android.library' version '8.1.4' apply false
@@ -20,4 +20,5 @@ ext {
     test_espresso = '3.5.1'
     test_junit = '1.1.5'
     junit_version = '4.13.2'
+    navigation_version = '2.7.7'
 }

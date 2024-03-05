@@ -72,4 +72,7 @@ dependencies {
 
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.compose.material3:material3:$material3_version"
+
+    // Compose navigation
+    implementation("androidx.navigation:navigation-compose:$navigation_version")
 }
