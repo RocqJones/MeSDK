@@ -37,23 +37,19 @@ fun HomeScreen(navController: NavHostController) {
 
             // list
             Button(
-                modifier = Modifier
-                    .padding(padding)
-                    .fillMaxWidth(),
+                modifier = Modifier.padding(padding).fillMaxWidth(),
                 shape = MaterialTheme.shapes.medium,
                 onClick = { navController.navigate(Screen.EndlessScreen.route) }
             ) {
                 Text(
-                    "Vertical Endless List",
+                    "Vertical Bouncing Scrolling List",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
 
             // Bottom Sheets
             Button(
-                modifier = Modifier
-                    .padding(padding)
-                    .fillMaxWidth(),
+                modifier = Modifier.padding(padding).fillMaxWidth(),
                 shape = MaterialTheme.shapes.medium,
                 onClick = { navController.navigate(Screen.BottomSheetDialogScreen.route) }
             ) {
