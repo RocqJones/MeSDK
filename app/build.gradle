@@ -62,7 +62,7 @@ dependencies {
 
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$test_junit"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$test_espresso"
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$test_manifest"
