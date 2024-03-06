@@ -12,8 +12,8 @@ import com.rocqjones.me_logic.utils.ToastUtils
  */
 abstract class BaseActivity : ComponentActivity() {
 
-    private var activityContext: Activity? = null
-    var toastUtils: ToastUtils? = null
+    lateinit var activityContext: Activity
+    lateinit var toastUtils: ToastUtils
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,7 @@ abstract class BaseActivity : ComponentActivity() {
     private fun initialize() {
         try {
             activityContext = activityContext()
-            toastUtils = ToastUtils(activityContext!!)
+            toastUtils = ToastUtils(activityContext)
         } catch (e: Exception) {
             e.printStackTrace()
         }

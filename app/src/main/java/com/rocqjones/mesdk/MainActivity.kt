@@ -15,9 +15,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.rocqjones.me_design.screens.BottomSheetDialogScreen
 import com.rocqjones.me_design.screens.EndlessScreen
+import com.rocqjones.me_design.screens.HomeScreen
 import com.rocqjones.me_design.ui.theme.MeSDKTheme
 import com.rocqjones.me_logic.models.Screen
-import com.rocqjones.mesdk.screens.HomeScreen
 
 /**
  * This is the first launcher screen of the SDK.

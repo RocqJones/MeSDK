@@ -1,4 +1,4 @@
-package com.rocqjones.mesdk.screens
+package com.rocqjones.me_design.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
