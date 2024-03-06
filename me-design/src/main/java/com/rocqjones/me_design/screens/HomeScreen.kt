@@ -1,8 +1,8 @@
 package com.rocqjones.me_design.screens
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -19,21 +19,26 @@ import com.rocqjones.me_logic.models.Screen
 @Composable
 fun HomeScreen(navController: NavHostController) {
 
-    Box {
+    Box(modifier = Modifier.fillMaxSize()) {
         /**
          * When the button is clicked, should navigate to the respective UI
          */
         Column(
             modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             val padding = 8.dp
+            val space = 16.dp
+
+            Spacer(modifier = Modifier.padding(space))
+
             Text(
                 "Welcome to the Me SDK!",
                 style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.secondary,
             )
+
+            Spacer(modifier = Modifier.padding(space))
 
             // list
             Button(
