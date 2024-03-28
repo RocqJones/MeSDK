@@ -62,14 +62,14 @@ fun MyAppMain() {
 
 @Preview(
     showBackground = true,
-    widthDp = 320,
-    name = "DefaultPreviewLight"
+    widthDp = 450,
+    name = "Light"
 )
 @Preview(
     showBackground = true,
-    widthDp = 320,
+    widthDp = 450,
     uiMode = Configuration.UI_MODE_NIGHT_YES,
-    name = "DefaultPreviewDark"
+    name = "Dark"
 )
 @Composable
 fun DefaultPreview() {
