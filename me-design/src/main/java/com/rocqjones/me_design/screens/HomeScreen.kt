@@ -63,6 +63,18 @@ fun HomeScreen(navController: NavHostController) {
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
+
+            // Gen AI Home screen
+            Button(
+                modifier = Modifier.padding(padding).fillMaxWidth(),
+                shape = MaterialTheme.shapes.medium,
+                onClick = { navController.navigate(Screen.GenHomeScreen.route) }
+            ) {
+                Text(
+                    "Generated AI Screen",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
         }
     }
 }
