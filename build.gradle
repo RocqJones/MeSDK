@@ -1,12 +1,12 @@
 buildscript {
     ext.compose_version = '1.5.4' // compose.runtime
-    ext.compose_compiler = '1.4.4' // Release: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+    ext.compose_compiler = '1.5.2' // Release: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
 }
 
 plugins {
     id 'com.android.application' version '8.5.0' apply false
     id 'com.android.library' version '8.5.0' apply false
-    id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
 }
 
 ext {
@@ -19,7 +19,7 @@ ext {
     navigation_version = '2.7.7'
     // Testing
     test_manifest = '1.6.8'
-    test_espresso = '3.5.1'
-    test_junit = '1.1.5'
+    test_espresso = '3.6.1'
+    test_junit = '1.2.1'
     junit_version = '4.13.2'
 }
