@@ -15,6 +15,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.rocqjones.me_design.screens.BottomSheetDialogScreen
 import com.rocqjones.me_design.screens.EndlessScreen
+import com.rocqjones.me_design.screens.GenHomeScreen
 import com.rocqjones.me_design.screens.HomeScreen
 import com.rocqjones.me_design.ui.theme.MeSDKTheme
 import com.rocqjones.me_logic.models.Screen
@@ -56,6 +57,10 @@ fun MyAppMain() {
 
         composable(Screen.BottomSheetDialogScreen.route) {
             BottomSheetDialogScreen(navController)
+        }
+
+        composable(Screen.GenHomeScreen.route) {
+            GenHomeScreen()
         }
     }
 }

@@ -8,4 +8,5 @@ sealed class Screen(val route: String) {
     object HomeScreen : Screen("homeScreen")
     object EndlessScreen : Screen("endlessScreen")
     object BottomSheetDialogScreen : Screen("bottomSheetDialogScreen")
+    object GenHomeScreen : Screen("genHomeScreen")
 }
