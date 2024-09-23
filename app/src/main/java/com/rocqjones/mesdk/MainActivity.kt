@@ -17,6 +17,7 @@ import com.rocqjones.me_design.screens.BottomSheetDialogScreen
 import com.rocqjones.me_design.screens.EndlessScreen
 import com.rocqjones.me_design.screens.GenHomeScreen
 import com.rocqjones.me_design.screens.HomeScreen
+import com.rocqjones.me_design.screens.VoiceInputScreen
 import com.rocqjones.me_design.ui.theme.MeSDKTheme
 import com.rocqjones.me_logic.models.Screen
 
@@ -47,21 +48,15 @@ fun MyAppMain() {
     NavHost(
         navController, startDestination = Screen.HomeScreen.route
     ) {
-        composable(Screen.HomeScreen.route) {
-            HomeScreen(navController)
-        }
+        composable(Screen.HomeScreen.route) { HomeScreen(navController) }
 
-        composable(Screen.EndlessScreen.route) {
-            EndlessScreen(navController)
-        }
+        composable(Screen.EndlessScreen.route) { EndlessScreen(navController) }
 
-        composable(Screen.BottomSheetDialogScreen.route) {
-            BottomSheetDialogScreen(navController)
-        }
+        composable(Screen.BottomSheetDialogScreen.route) { BottomSheetDialogScreen(navController) }
 
-        composable(Screen.GenHomeScreen.route) {
-            GenHomeScreen()
-        }
+        composable(Screen.GenHomeScreen.route) { GenHomeScreen() }
+
+        composable(Screen.VoiceInputScreen.route) { VoiceInputScreen() }
     }
 }
 

@@ -26,7 +26,7 @@ import com.rocqjones.me_logic.providers.SampleDataSource
 fun GenHomeScreen() {
     Column(modifier = Modifier.padding(16.dp)) {
         Text("Good Afternoon,", style = MaterialTheme.typography.titleSmall)
-        Text("Jones", style = MaterialTheme.typography.titleLarge)
+        Text("UserName", style = MaterialTheme.typography.titleLarge)
         Spacer(modifier = Modifier.height(16.dp))
 
         // Use LazyRow for efficient scrolling if the number of buttons can grow

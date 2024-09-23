@@ -71,7 +71,19 @@ fun HomeScreen(navController: NavHostController) {
                 onClick = { navController.navigate(Screen.GenHomeScreen.route) }
             ) {
                 Text(
-                    "Generated AI Screen",
+                    "AI Generated Screen",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            // VoiceInput screen
+            Button(
+                modifier = Modifier.padding(padding).fillMaxWidth(),
+                shape = MaterialTheme.shapes.medium,
+                onClick = { navController.navigate(Screen.VoiceInputScreen.route) }
+            ) {
+                Text(
+                    "Voice Input Listener",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
