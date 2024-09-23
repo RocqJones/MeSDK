@@ -71,7 +71,7 @@ fun HomeScreen(navController: NavHostController) {
                 onClick = { navController.navigate(Screen.GenHomeScreen.route) }
             ) {
                 Text(
-                    "Generated AI Screen",
+                    "AI Generated Screen",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
