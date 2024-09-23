@@ -83,7 +83,7 @@ fun HomeScreen(navController: NavHostController) {
                 onClick = { navController.navigate(Screen.VoiceInputScreen.route) }
             ) {
                 Text(
-                    "Voice Input Viewer",
+                    "Voice Input Listener",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
