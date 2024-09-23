@@ -75,6 +75,18 @@ fun HomeScreen(navController: NavHostController) {
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
+
+            // VoiceInput screen
+            Button(
+                modifier = Modifier.padding(padding).fillMaxWidth(),
+                shape = MaterialTheme.shapes.medium,
+                onClick = { navController.navigate(Screen.VoiceInputScreen.route) }
+            ) {
+                Text(
+                    "Voice Input Viewer",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
         }
     }
 }

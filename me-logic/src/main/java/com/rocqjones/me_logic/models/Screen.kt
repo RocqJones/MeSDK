@@ -5,8 +5,9 @@ package com.rocqjones.me_logic.models
  * states which is useful for handling navigation in our app.
  */
 sealed class Screen(val route: String) {
-    object HomeScreen : Screen("homeScreen")
-    object EndlessScreen : Screen("endlessScreen")
-    object BottomSheetDialogScreen : Screen("bottomSheetDialogScreen")
-    object GenHomeScreen : Screen("genHomeScreen")
+    data object HomeScreen : Screen("homeScreen")
+    data object EndlessScreen : Screen("endlessScreen")
+    data object BottomSheetDialogScreen : Screen("bottomSheetDialogScreen")
+    data object GenHomeScreen : Screen("genHomeScreen")
+    data object VoiceInputScreen : Screen("voiceInputScreen")
 }
