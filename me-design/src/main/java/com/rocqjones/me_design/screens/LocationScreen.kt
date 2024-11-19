@@ -1,8 +1,5 @@
 package com.rocqjones.me_design.screens
 
-import android.annotation.SuppressLint
-import android.content.Context
-import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
@@ -22,15 +19,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import androidx.core.content.ContextCompat
-import com.google.android.gms.location.LocationServices
+import com.rocqjones.me_design.ui.helpers.MediumVerticalSpacing
+import com.rocqjones.me_logic.utils.PermissionsUtils
 
 @Composable
 fun LocationScreen() {
     val currentContext = LocalContext.current
     var location by remember { mutableStateOf("Your location") }
     var cameraGranted by remember {
-        mutableStateOf(hasCameraPermission(currentContext))
+        mutableStateOf(PermissionsUtils.hasCameraPermission(currentContext))
     }
 
     // Create a permission launcher
@@ -40,7 +37,7 @@ fun LocationScreen() {
             onResult = { isGranted: Boolean ->
                 if (isGranted) {
                     // Permission granted, update the location
-                    getCurrentLocation(currentContext) { lat, long ->
+                    PermissionsUtils.getCurrentLocation(currentContext) { lat, long ->
                         location = "Latitude: $lat, Longitude: $long"
                     }
                 }
@@ -68,9 +65,9 @@ fun LocationScreen() {
         Button(
             onClick = {
                 when {
-                    hasLocationPermission(currentContext) -> {
+                    PermissionsUtils.hasLocationPermission(currentContext) -> {
                         // Permission already granted, update the location
-                        getCurrentLocation(currentContext) { lat, long ->
+                        PermissionsUtils.getCurrentLocation(currentContext) { lat, long ->
                             location = "Latitude: $lat, Longitude: $long"
                         }
                     }
@@ -87,17 +84,17 @@ fun LocationScreen() {
             Text(text = "Allow Location")
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        MediumVerticalSpacing()
 
         Text(text = location)
 
-        Spacer(modifier = Modifier.height(16.dp))
+        MediumVerticalSpacing()
 
         Button(
             onClick = {
                 when {
-                    hasCameraPermission(currentContext) -> {
-                        cameraGranted = hasCameraPermission(currentContext)
+                    PermissionsUtils.hasCameraPermission(currentContext) -> {
+                        cameraGranted = PermissionsUtils.hasCameraPermission(currentContext)
                     }
 
                     else -> {
@@ -112,49 +109,8 @@ fun LocationScreen() {
             Text(text = "Allow Camera")
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        MediumVerticalSpacing()
 
         Text(text = "Camera Allowed: $cameraGranted")
-    }
-}
-
-private fun hasLocationPermission(context: Context): Boolean {
-    return try {
-        ContextCompat.checkSelfPermission(
-            context,
-            android.Manifest.permission.ACCESS_FINE_LOCATION
-        ) == PackageManager.PERMISSION_GRANTED
-    } catch (e: Exception) {
-        false
-    }
-}
-
-private fun hasCameraPermission(context: Context): Boolean {
-    return try {
-        ContextCompat.checkSelfPermission(
-            context,
-            android.Manifest.permission.CAMERA
-        ) == PackageManager.PERMISSION_GRANTED
-    } catch (e: Exception) {
-        false
-    }
-}
-
-@SuppressLint("MissingPermission")
-private fun getCurrentLocation(context: Context, callback: (Double, Double) -> Unit) {
-    try {
-        val fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
-        fusedLocationClient.lastLocation.addOnSuccessListener { location ->
-            if (location != null) {
-                val lat = location.latitude
-                val long = location.longitude
-                callback(lat, long)
-            }
-        }.addOnFailureListener { exception ->
-            // Handle location retrieval failure
-            exception.printStackTrace()
-        }
-    } catch (e: Exception) {
-        e.printStackTrace()
     }
 }
