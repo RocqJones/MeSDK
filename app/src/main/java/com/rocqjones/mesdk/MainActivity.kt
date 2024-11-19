@@ -17,6 +17,7 @@ import com.rocqjones.me_design.screens.BottomSheetDialogScreen
 import com.rocqjones.me_design.screens.EndlessScreen
 import com.rocqjones.me_design.screens.GenHomeScreen
 import com.rocqjones.me_design.screens.HomeScreen
+import com.rocqjones.me_design.screens.LocationScreen
 import com.rocqjones.me_design.screens.VoiceInputScreen
 import com.rocqjones.me_design.ui.theme.MeSDKTheme
 import com.rocqjones.me_logic.models.Screen
@@ -57,6 +58,8 @@ fun MyAppMain() {
         composable(Screen.GenHomeScreen.route) { GenHomeScreen() }
 
         composable(Screen.VoiceInputScreen.route) { VoiceInputScreen() }
+
+        composable(Screen.LocationScreen.route) { LocationScreen() }
     }
 }
 

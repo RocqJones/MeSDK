@@ -87,6 +87,18 @@ fun HomeScreen(navController: NavHostController) {
                     style = MaterialTheme.typography.bodyLarge
                 )
             }
+
+            // VoiceInput screen
+            Button(
+                modifier = Modifier.padding(padding).fillMaxWidth(),
+                shape = MaterialTheme.shapes.medium,
+                onClick = { navController.navigate(Screen.LocationScreen.route) }
+            ) {
+                Text(
+                    "Request Permission",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
         }
     }
 }
