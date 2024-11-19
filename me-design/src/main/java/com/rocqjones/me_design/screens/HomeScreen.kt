@@ -40,7 +40,6 @@ fun HomeScreen(navController: NavHostController) {
 
             Spacer(modifier = Modifier.padding(space))
 
-            // list
             Button(
                 modifier = Modifier.padding(padding).fillMaxWidth(),
                 shape = MaterialTheme.shapes.medium,
@@ -52,7 +51,6 @@ fun HomeScreen(navController: NavHostController) {
                 )
             }
 
-            // Bottom Sheets
             Button(
                 modifier = Modifier.padding(padding).fillMaxWidth(),
                 shape = MaterialTheme.shapes.medium,
@@ -64,7 +62,6 @@ fun HomeScreen(navController: NavHostController) {
                 )
             }
 
-            // Gen AI Home screen
             Button(
                 modifier = Modifier.padding(padding).fillMaxWidth(),
                 shape = MaterialTheme.shapes.medium,
@@ -76,7 +73,6 @@ fun HomeScreen(navController: NavHostController) {
                 )
             }
 
-            // VoiceInput screen
             Button(
                 modifier = Modifier.padding(padding).fillMaxWidth(),
                 shape = MaterialTheme.shapes.medium,
@@ -84,6 +80,17 @@ fun HomeScreen(navController: NavHostController) {
             ) {
                 Text(
                     "Voice Input Listener",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            Button(
+                modifier = Modifier.padding(padding).fillMaxWidth(),
+                shape = MaterialTheme.shapes.medium,
+                onClick = { navController.navigate(Screen.LocationScreen.route) }
+            ) {
+                Text(
+                    "Request Permission",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }

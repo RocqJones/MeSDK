@@ -2,16 +2,16 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
-    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
 }
 
 android {
     namespace 'com.rocqjones.me_design'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         minSdk 23
-        targetSdk 34
+        targetSdk 35
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -61,7 +61,7 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$test_junit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$test_espresso"
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$test_junit"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$test_manifest"
 
@@ -75,4 +75,7 @@ dependencies {
 
     // Compose navigation
     implementation("androidx.navigation:navigation-compose:$navigation_version")
+
+    implementation "com.google.android.gms:play-services-location:$services_location"
+    implementation "com.google.accompanist:accompanist-permissions:0.25.0"
 }

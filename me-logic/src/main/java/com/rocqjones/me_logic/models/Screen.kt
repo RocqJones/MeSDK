@@ -10,4 +10,5 @@ sealed class Screen(val route: String) {
     data object BottomSheetDialogScreen : Screen("bottomSheetDialogScreen")
     data object GenHomeScreen : Screen("genHomeScreen")
     data object VoiceInputScreen : Screen("voiceInputScreen")
+    data object LocationScreen : Screen("locationScreen")
 }
