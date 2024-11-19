@@ -1,24 +1,24 @@
 buildscript {
-    ext.compose_version = '1.5.4' // compose.runtime
-    ext.compose_compiler = '1.5.2' // Release: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+    ext.compose_version = '1.5.13' // compose.runtime
+    ext.compose_compiler = '1.5.12' // Release: https://developer.android.com/jetpack/androidx/releases/compose-kotlin
 }
 
 plugins {
-    id 'com.android.application' version '8.5.0' apply false
-    id 'com.android.library' version '8.5.0' apply false
-    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+    id 'com.android.application' version '8.5.2' apply false
+    id 'com.android.library' version '8.5.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.23' apply false
 }
 
 ext {
-    core_version = '1.13.1'
-    activity_compose = '1.9.2'
+    core_version = '1.15.0'
+    activity_compose = '1.9.3'
     lifecycle_runtime = '2.8.2'
     material_version = '1.12.0'
     material3_version = '1.2.0'
     appcompat_version = '1.7.0'
-    navigation_version = '2.8.1'
+    navigation_version = '2.8.4'
     // Testing
-    test_manifest = '1.7.2'
+    test_manifest = '1.7.5'
     test_espresso = '3.6.1'
     test_junit = '1.2.1'
     junit_version = '4.13.2'
