@@ -1,4 +1,4 @@
-package com.rocqjones.me_design.screens
+package com.rocqjones.me_design.ui.screens
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts

@@ -13,12 +13,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.rocqjones.me_design.screens.BottomSheetDialogScreen
-import com.rocqjones.me_design.screens.EndlessScreen
-import com.rocqjones.me_design.screens.GenHomeScreen
-import com.rocqjones.me_design.screens.HomeScreen
-import com.rocqjones.me_design.screens.LocationScreen
-import com.rocqjones.me_design.screens.VoiceInputScreen
+import com.rocqjones.me_design.ui.screens.BottomSheetDialogScreen
+import com.rocqjones.me_design.ui.screens.EndlessScreen
+import com.rocqjones.me_design.ui.screens.GenHomeScreen
+import com.rocqjones.me_design.ui.screens.HomeScreen
+import com.rocqjones.me_design.ui.screens.LocationScreen
+import com.rocqjones.me_design.ui.screens.VoiceInputScreen
 import com.rocqjones.me_design.ui.theme.MeSDKTheme
 import com.rocqjones.me_logic.models.Screen
 

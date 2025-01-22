@@ -1,4 +1,4 @@
-package com.rocqjones.me_design.screens
+package com.rocqjones.me_design.ui.screens
 
 import android.content.Intent
 import android.speech.RecognizerIntent
