@@ -1,4 +1,4 @@
-package com.rocqjones.me_design.screens
+package com.rocqjones.me_design.ui.screens
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
